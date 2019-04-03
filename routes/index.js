@@ -6,7 +6,7 @@ var fs = require('fs');
 //var templateString = fs.readFileSync('./views/hoadon1.html', 'utf-8');
 const getHoadonHtml = ()=>{
 var HoadonHtml = fs.readFileSync('./views/hoadon.ejs','utf-8');
-var pageInfo= '<!DOCTYPE html><html><head><title>HTml to PDF</title><link rel="stylesheet" href="http://localhost:3000/stylesheets/style.css" /><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> </head><body>';
+var pageInfo= '<!DOCTYPE html><html><head><title>HTml to PDF</title><link rel="stylesheet" href="https://projectreportt.herokuapp.com/stylesheets/style.css" /><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> </head><body>';
 var pageEnd = "</body></html>";
 var html= pageInfo + ejs.render(HoadonHtml)+pageEnd;
 return html;
